@@ -1,0 +1,222 @@
+:root {
+  --white: #ffffff;
+  --turquoise: #1abc9c;
+  --gray: #7f8c8d;
+  --bg: #f8f9fa;
+  --radius: 20px;
+  --shadow: 0 8px 25px rgba(0,0,0,0.08);
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(14px);
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.7);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 18px 30px;
+}
+.logo h1 {
+  margin: 0;
+  color: var(--turquoise);
+  font-size: 1.9rem;
+}
+.nav a {
+  text-decoration: none;
+  margin-left: 25px;
+  color: var(--gray);
+  font-weight: 600;
+  transition: color .2s;
+}
+.nav a:hover {
+  color: var(--turquoise);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, #eafff8 0%, #ffffff 100%);
+  padding: 80px 0;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1 1 500px;
+}
+.hero-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+.hero-text p {
+  color: var(--gray);
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+}
+.hero-img img {
+  width: 450px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+.hero-img img:hover {
+  transform: scale(1.03);
+}
+
+/* Buttons */
+.btn, .btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-size: 1.05rem;
+}
+.btn {
+  background: var(--turquoise);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background: #16a085;
+}
+.btn-outline {
+  border: 2px solid var(--turquoise);
+  color: var(--turquoise);
+}
+.btn-outline:hover {
+  background: var(--turquoise);
+  color: var(--white);
+}
+
+/* Sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+h2 {
+  text-align: center;
+  color: var(--turquoise);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* About */
+.about p {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 30px;
+}
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  color: #333;
+}
+
+/* Examples */
+.examples {
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+.gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .3s;
+}
+.gallery img:hover {
+  transform: scale(1.04);
+}
+.caption {
+  color: var(--gray);
+  font-style: italic;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  background: #f4fdfb;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 60px 20px;
+}
+.contact p {
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px 0;
+  color: var(--gray);
+  border-top: 1px solid #e0e0e0;
+}
+.footer a {
+  color: var(--turquoise);
+  text-decoration: none;
+}
+.credit {
+  margin-top: 6px;
+  color: #999;
+  font-size: 0.95rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Floating Telegram Button */
+.float-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: var(--turquoise);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+.float-btn img {
+  width: 36px;
+  height: 36px;
+}
+.float-btn:hover {
+  transform: scale(1.1);
+}
